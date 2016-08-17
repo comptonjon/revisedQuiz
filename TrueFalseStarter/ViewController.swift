@@ -11,7 +11,7 @@ import GameKit
 
 class ViewController: UIViewController {
     
-    let lightningTime = 15
+    let lightningTime = 10
     let color = ColorModel()
     var gameModel = GameModel()
     var sounds = Sounds()
