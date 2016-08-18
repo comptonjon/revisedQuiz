@@ -20,6 +20,7 @@
 		B13FEF991D5FED5300D95B12 /* correctDing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B13FEF981D5FED5300D95B12 /* correctDing.mp3 */; };
 		B13FEF9B1D5FED5800D95B12 /* wrongBuzzer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B13FEF9A1D5FED5800D95B12 /* wrongBuzzer.mp3 */; };
 		B13FEF9D1D5FFC3700D95B12 /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13FEF9C1D5FFC3700D95B12 /* Sounds.swift */; };
+		B15CDC731D662CD000178B21 /* beep5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B15CDC721D662CD000178B21 /* beep5.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		B13FEF981D5FED5300D95B12 /* correctDing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correctDing.mp3; sourceTree = "<group>"; };
 		B13FEF9A1D5FED5800D95B12 /* wrongBuzzer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wrongBuzzer.mp3; sourceTree = "<group>"; };
 		B13FEF9C1D5FFC3700D95B12 /* Sounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
+		B15CDC721D662CD000178B21 /* beep5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep5.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				97093D471C913506001275BC /* Info.plist */,
 				97093D521C932116001275BC /* GameSound.wav */,
 				B13FEF981D5FED5300D95B12 /* correctDing.mp3 */,
+				B15CDC721D662CD000178B21 /* beep5.mp3 */,
 				B13FEF9A1D5FED5800D95B12 /* wrongBuzzer.mp3 */,
 				B13FEF921D5FECBD00D95B12 /* Question.swift */,
 				B13FEF941D5FECD700D95B12 /* QuestionModel.swift */,
@@ -153,6 +156,7 @@
 				97093D461C913506001275BC /* LaunchScreen.storyboard in Resources */,
 				97093D431C913506001275BC /* Assets.xcassets in Resources */,
 				97093D411C913506001275BC /* Main.storyboard in Resources */,
+				B15CDC731D662CD000178B21 /* beep5.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

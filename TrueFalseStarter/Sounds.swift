@@ -34,6 +34,14 @@ struct Sounds {
         let soundURL = NSURL(fileURLWithPath: pathToSoundFile!)
         AudioServicesCreateSystemSoundID(soundURL, &gameSound)
         AudioServicesPlaySystemSound(gameSound)
+        
+    }
+    
+    mutating func playLightningBeep(){
+        let pathToSoundFile = NSBundle.mainBundle().pathForResource("beep5", ofType: "mp3")
+        let soundURL = NSURL(fileURLWithPath: pathToSoundFile!)
+        AudioServicesCreateSystemSoundID(soundURL, &gameSound)
+        AudioServicesPlaySystemSound(gameSound)
     }
     
 }

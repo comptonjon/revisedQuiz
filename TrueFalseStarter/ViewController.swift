@@ -9,15 +9,18 @@
 import UIKit
 import GameKit
 
+let LIGHTNING_TIME = 15
+
 class ViewController: UIViewController {
     
-    let lightningTime = 10
+    
     let color = ColorModel()
     var gameModel = GameModel()
     var sounds = Sounds()
     var question:Question? = nil
     var timer = NSTimer()
-    var lightningRoundSeconds = 15
+    var lightningRoundSeconds = LIGHTNING_TIME
+    var lightning = false
 
 
     @IBOutlet weak var questionField: UILabel!
@@ -26,7 +29,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonThree: UIButton!
     @IBOutlet weak var buttonFour: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
-    
+    @IBOutlet weak var lightningLabel: UILabel!
     @IBOutlet weak var playAgainButton: UIButton!
 
     
@@ -44,6 +47,10 @@ class ViewController: UIViewController {
     }
     
     func displayQuestion() {
+        if !lightning {
+            timeLabel.hidden = true
+            lightningLabel.hidden = true
+        }
         
         playAgainButton.hidden = true
         view.backgroundColor = color.game
@@ -57,6 +64,8 @@ class ViewController: UIViewController {
     
     func displayScore() {
         view.backgroundColor = color.game
+        timeLabel.hidden = true
+        lightningLabel.hidden = true
         
         // Hide the answer buttons
         buttonOne.hidden = true
@@ -93,6 +102,9 @@ class ViewController: UIViewController {
         checkAnswer(3)
     }
     func checkAnswer(answer: Int) {
+        if lightning {
+            timer.invalidate()
+        }
        
         let correctAnswer = question!.answerIndex
         
@@ -125,6 +137,7 @@ class ViewController: UIViewController {
     
     func nextRound() {
         if gameModel.questionsLeft <= 2 && gameModel.questionsLeft > 0{
+            lightning = true
             lightningMode()
         }
         if gameModel.questionsLeft == 0 {
@@ -150,19 +163,22 @@ class ViewController: UIViewController {
     }
     
     func lightningMode(){
-        lightningRoundSeconds = 15
+        timeLabel.hidden = false
+        lightningLabel.hidden = false
+        lightningRoundSeconds = LIGHTNING_TIME
+        timeLabel.text = ":" + String(lightningRoundSeconds)
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController.processTimer), userInfo: nil, repeats: true)
         
     }
     
     func processTimer(){
-        
+        sounds.playLightningBeep()
         if lightningRoundSeconds == 1 {
             timer.invalidate()
             displayResult(false, correctAnswer: question!.answerIndex)
         }
         lightningRoundSeconds -= 1
-        timeLabel.text = String(lightningRoundSeconds)
+        timeLabel.text = ":" + String(lightningRoundSeconds)
         
         
     }

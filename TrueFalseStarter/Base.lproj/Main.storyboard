@@ -72,15 +72,15 @@
                                     <action selector="buttonOnePress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dA8-dj-ZUr"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIGHTNING ROUND!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ad8-xw-W6w">
-                                <rect key="frame" x="189" y="28" width="222" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" red="1" green="0.55177091" blue="0.2652034264" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":88" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaS-IJ-hUN">
                                 <rect key="frame" x="280" y="65" width="40.5" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" red="1" green="0.55177091" blue="0.2652034264" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIGHTNING ROUND!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ad8-xw-W6w">
+                                <rect key="frame" x="189" y="28" width="222" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="1" green="0.55177091" blue="0.2652034264" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -125,6 +125,7 @@
                         <outlet property="buttonOne" destination="z2L-Ka-Yfc" id="oCP-Rj-nBY"/>
                         <outlet property="buttonThree" destination="J1V-MS-ECi" id="6IH-Sx-dov"/>
                         <outlet property="buttonTwo" destination="Clo-tE-S4d" id="tte-fR-wbp"/>
+                        <outlet property="lightningLabel" destination="Ad8-xw-W6w" id="0Bk-Hz-Mzy"/>
                         <outlet property="playAgainButton" destination="K17-uy-MvB" id="0Bx-Cm-ye0"/>
                         <outlet property="questionField" destination="I3V-ih-1Ky" id="7UI-o2-ATi"/>
                         <outlet property="timeLabel" destination="oaS-IJ-hUN" id="4eD-NV-9QE"/>
