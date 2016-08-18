@@ -28,9 +28,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonTwo: UIButton!
     @IBOutlet weak var buttonThree: UIButton!
     @IBOutlet weak var buttonFour: UIButton!
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var lightningLabel: UILabel!
+
     @IBOutlet weak var playAgainButton: UIButton!
+    @IBOutlet weak var labelTime: UILabel!
+    @IBOutlet weak var labelLightning: UILabel!
 
     
 
@@ -48,8 +49,8 @@ class ViewController: UIViewController {
     
     func displayQuestion() {
         if !lightning {
-            timeLabel.hidden = true
-            lightningLabel.hidden = true
+            labelTime.hidden = true
+            labelLightning.hidden = true
         }
         
         playAgainButton.hidden = true
@@ -64,8 +65,8 @@ class ViewController: UIViewController {
     
     func displayScore() {
         view.backgroundColor = color.game
-        timeLabel.hidden = true
-        lightningLabel.hidden = true
+        labelTime.hidden = true
+        labelLightning.hidden = true
         
         // Hide the answer buttons
         buttonOne.hidden = true
@@ -163,10 +164,10 @@ class ViewController: UIViewController {
     }
     
     func lightningMode(){
-        timeLabel.hidden = false
-        lightningLabel.hidden = false
+        labelTime.hidden = false
+        labelLightning.hidden = false
         lightningRoundSeconds = LIGHTNING_TIME
-        timeLabel.text = ":" + String(lightningRoundSeconds)
+        labelTime.text = ":" + String(lightningRoundSeconds)
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController.processTimer), userInfo: nil, repeats: true)
         
     }
@@ -178,7 +179,7 @@ class ViewController: UIViewController {
             displayResult(false, correctAnswer: question!.answerIndex)
         }
         lightningRoundSeconds -= 1
-        timeLabel.text = ":" + String(lightningRoundSeconds)
+        labelTime.text = ":" + String(lightningRoundSeconds)
         
         
     }

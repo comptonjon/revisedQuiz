@@ -125,10 +125,10 @@
                         <outlet property="buttonOne" destination="z2L-Ka-Yfc" id="oCP-Rj-nBY"/>
                         <outlet property="buttonThree" destination="J1V-MS-ECi" id="6IH-Sx-dov"/>
                         <outlet property="buttonTwo" destination="Clo-tE-S4d" id="tte-fR-wbp"/>
-                        <outlet property="lightningLabel" destination="Ad8-xw-W6w" id="0Bk-Hz-Mzy"/>
+                        <outlet property="labelLightning" destination="Ad8-xw-W6w" id="a6A-OD-qLd"/>
+                        <outlet property="labelTime" destination="oaS-IJ-hUN" id="RaI-Zu-PyQ"/>
                         <outlet property="playAgainButton" destination="K17-uy-MvB" id="0Bx-Cm-ye0"/>
                         <outlet property="questionField" destination="I3V-ih-1Ky" id="7UI-o2-ATi"/>
-                        <outlet property="timeLabel" destination="oaS-IJ-hUN" id="4eD-NV-9QE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
