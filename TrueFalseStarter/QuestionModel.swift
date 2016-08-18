@@ -22,12 +22,18 @@ struct QuestionModel {
      }
      */
     mutating func loadArray(){
-        questions.append(Question(question: "What was Ken Griffey Jr's uniform number?", answers: ["24", "22", "23", "12"], answerIndex: 0))
-        questions.append(Question(question: "Who killed Laura Palmer?", answers: ["Dale Cooper", "Leland Palmer", "Harry Truman", "Jerry Horne"], answerIndex: 1))
-        questions.append(Question(question: "The Sahara Desert is located in which continent?", answers: ["South America", "Antarctica", "Asia", "Africa"], answerIndex: 3))
-        questions.append(Question(question: "Who wrote 'Waiting for Godot'?", answers: ["Arthur Miller", "David Mamet", "Samuel Beckett", "William Shakespeare"], answerIndex: 2))
-        questions.append(Question(question: "'Tomorrow Never Knows' is the final song on which Beatles album?", answers: ["Sgt. Pepper's Lonely Hearts Club Band", "Revolver", "Rubber Soul", "Abbey Road"], answerIndex: 1))
-        questions.append(Question(question: "Who is the CEO of Apple?", answers: ["Bill Gates", "Steve Jobs", "Tim Cook", "Mark Cuban"], answerIndex: 2))
+        
+        questions.append(Question(question: "This was the only US President to serve more than two consecutive terms.", answers: ["George Washington", "Franklin D. Roosevelt", "Woodrow Wilson", "Andrew Jackson"], answerIndex: 1))
+        questions.append(Question(question: "Which of the following countries has the most residents?", answers: ["Nigeria", "Russia", "Iran", "Vietnam"], answerIndex: 0))
+        questions.append(Question(question: "In what year was the United Nations founded?", answers: ["1918", "1919", "1945", "1954"], answerIndex: 2))
+        questions.append(Question(question: "The Titanic departed from the United Kingdom, where was it supposed to arrive?", answers: ["Paris", "Washington D.C.", "New York City", "Boston"], answerIndex: 2))
+        questions.append(Question(question: "Which nation produces the most oil?", answers: ["Iran", "Iraq", "Brazil", "Canada"], answerIndex: 3))
+        questions.append(Question(question: "Which country has most recently won consecutive World Cups in Soccer?", answers: ["Italy", "Brazil", "Argentina", "Spain"], answerIndex: 1))
+        questions.append(Question(question: "Which of the following rivers is longest?", answers: ["Yangtze", "Mississippi", "Congo", "Mekong"], answerIndex: 1))
+        questions.append(Question(question: "Which city is oldest?", answers: ["Mexico City", "Cape Town", "San Juan", "Sydney"], answerIndex: 0))
+        questions.append(Question(question: "Which country was the first to allow women to vote in national elections?", answers: ["Poland", "United States", "Sweden", "Senegal"], answerIndex: 0))
+        questions.append(Question(question: "Which of these countries won the most medals in the 2012 Summer Games?", answers: ["France", "Germany", "Japan", "Great Britain"], answerIndex: 3))
+        
     }
     
     mutating func getQuestion()-> Question?{

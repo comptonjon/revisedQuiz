@@ -10,14 +10,13 @@ import GameKit
 
 struct GameModel {
     let questionArray:[Question]
-    let numberOfQuestions:Int
+    let numberOfQuestions = 6
     var questionsLeft:Int
     let questions = QuestionModel()
     var usedNumber:[Int] = []
     var correctQuestions:Int
     init(){
         questionArray = questions.getQuestionArray()
-        numberOfQuestions = questionArray.count
         questionsLeft = numberOfQuestions
         correctQuestions = 0
     }
